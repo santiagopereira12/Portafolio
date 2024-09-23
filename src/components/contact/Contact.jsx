@@ -4,6 +4,8 @@ import theme_pattern from '../../assets/theme_pattern.svg'
 import call_icon from '../../assets/call_icon.svg'
 import location_icon from '../../assets/location_icon.svg'
 import mail_icon from '../../assets/mail_icon.svg'
+import github from '../../assets/logos/icons8-github.svg'
+import linkedin from '../../assets/logos/icons8-linkedin.svg'
 
 const Contact = () => {
     return (
@@ -29,6 +31,16 @@ const Contact = () => {
                     <div className="contact-details">
                         <div className="contact-detail">
                             <img src={location_icon} alt="" /><p>Bogotá, Colombia</p>
+                        </div>
+                    </div>
+                    <div className="contact-details">
+                        <div className="contact-detail-icon">
+                            <a href="https://www.linkedin.com/in/santiago-pereira-0912/" target='_blank' rel='nooper noreferrer'>
+                                <img src={linkedin} alt="" className='icon-linkedin'/>
+                            </a>
+                            <a href="https://github.com/santiagopereira12?tab=repositories" target='_blank' rel='noopener noreferrer'>
+                                <img src={github} alt="" className='icon-github'/>
+                            </a>
                         </div>
                     </div>
                 </div>

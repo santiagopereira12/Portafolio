@@ -8,6 +8,30 @@ import github from '../../assets/logos/icons8-github.svg'
 import linkedin from '../../assets/logos/icons8-linkedin.svg'
 
 const Contact = () => {
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "2a63818c-2c94-4f9b-a00d-d1a7cdb30c36");
+
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        const res = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            body: json
+        }).then((res) => res.json());
+
+        if (res.success) {
+            alert(res.message);
+        }
+    };
+
     return (
         <div id='contact' className='contact'>
             <div className="contact-title">
@@ -36,22 +60,22 @@ const Contact = () => {
                     <div className="contact-details">
                         <div className="contact-detail-icon">
                             <a href="https://www.linkedin.com/in/santiago-pereira-0912/" target='_blank' rel='nooper noreferrer'>
-                                <img src={linkedin} alt="" className='icon-linkedin'/>
+                                <img src={linkedin} alt="" className='icon-linkedin' />
                             </a>
                             <a href="https://github.com/santiagopereira12?tab=repositories" target='_blank' rel='noopener noreferrer'>
-                                <img src={github} alt="" className='icon-github'/>
+                                <img src={github} alt="" className='icon-github' />
                             </a>
                         </div>
                     </div>
                 </div>
-                <form className="contact-right">
-                    <label htmlFor="">Your Name</label>
-                    <input type="text" placeholder='Enter Your Name' name='name' />
-                    <label htmlFor="">Your Email</label>
-                    <input type="email" placeholder='Enter your email' name='email' />
-                    <label htmlFor="">Write your message here</label>
-                    <textarea name="message" rows='8' placeholder='Enter your message'></textarea>
-                    <button type='submit' className='contact-submit'>Submit now</button>
+                <form onSubmit={onSubmit} className="contact-right">
+                    <label htmlFor="name">Your Name</label>
+                    <input type="text" placeholder="Enter Your Name" name="name" required />
+                    <label htmlFor="email">Your Email</label>
+                    <input type="email" placeholder="Enter your email" name="email" required />
+                    <label htmlFor="message">Write your message here</label>
+                    <textarea name="message" rows="8" placeholder="Enter your message" required></textarea>
+                    <button type="submit" className="contact-submit">Submit now</button>
                 </form>
             </div>
         </div>

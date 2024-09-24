@@ -22,11 +22,11 @@ const Footer = () => {
       <hr />
       <div className="footer-bottom">
         <p className="footer-bottom-left">© 2024 Santiago Pereira. All rights reserved.</p>
-        <dev className="footer-bottom-right">
+        <div className="footer-bottom-right">
             <p>Term of Services</p>
             <p>Privacy Policy</p>
             <p>Connect with me</p>
-        </dev>
+        </div>
       </div>
     </div>
   )

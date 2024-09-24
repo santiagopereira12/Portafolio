@@ -117,3 +117,21 @@
     transform: scale(1.1);
     transition: 0.3s;
 }
+
+.icon-linkedin{
+    transition: 0.3s;
+}
+
+.icon-linkedin:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.icon-github{
+    transition: 0.3s;
+}
+
+.icon-github:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}

@@ -9,7 +9,7 @@ import linkedin from '../../assets/logos/icons8-linkedin.svg'
 
 const Contact = () => {
     return (
-        <div className='contact'>
+        <div id='contact' className='contact'>
             <div className="contact-title">
                 <h1>Get in Touch</h1>
                 <img src={theme_pattern} alt="" />

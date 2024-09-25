@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
 
-const navbar = () => {
+const Navbar = () => {
 
   const [menu, setMenu] = useState("home");
   const menuRef = useRef();
@@ -37,4 +37,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar

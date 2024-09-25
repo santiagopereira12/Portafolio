@@ -6,7 +6,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
 
-const Navbar = () => {
+const navbar = () => {
 
   const [menu, setMenu] = useState("home");
   const menuRef = useRef();
@@ -18,7 +18,7 @@ const Navbar = () => {
   const closeMenu = () => {
     menuRef.current.style.right="-350px";
   }
-  
+
   return (
     <div className='navbar'>
       <img src={logo} alt="" />
@@ -37,4 +37,4 @@ const Navbar = () => {
   )
 }
 
-export default Navbar
+export default navbar
